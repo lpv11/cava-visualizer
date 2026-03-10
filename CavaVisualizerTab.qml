@@ -173,7 +173,7 @@ DesktopPluginComponent {
     Item {
         id: vis
         anchors.fill:    parent
-        anchors.margins: 8
+        anchors.margins: 0
         clip:            true
 
         readonly property real effectiveBarW: root.barWidth > 0
