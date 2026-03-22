@@ -150,18 +150,8 @@ PluginSettings {
         options: [
             { label: I18n.tr("Primary"),   value: "primary"   },
             { label: I18n.tr("Secondary"), value: "secondary" },
-            { label: I18n.tr("Surface"),   value: "surface"   },
-            { label: I18n.tr("Custom"),    value: "custom"    }
+            { label: I18n.tr("Surface"),   value: "surface"   }
         ]
-    }
-
-    StringSetting {
-        settingKey:   "customColor"
-        label:        I18n.tr("Custom Colour")
-        description:  I18n.tr("Hex color for visualizer bars/curve. Example: #b48cf2")
-        placeholder:  "#b48cf2"
-        defaultValue: "#b48cf2"
-        visible:      (pluginData.colorChoice ?? "primary") === "custom"
     }
 
     SliderSetting {

@@ -36,12 +36,6 @@ DesktopPluginComponent {
 
     readonly property color barColor: {
         const choice = pluginData.colorChoice ?? "primary"
-        if (choice === "custom") {
-            const raw = (pluginData.customColor ?? "").toString().trim()
-            const valid = /^#?[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$/.test(raw)
-            if (valid)
-                return raw.startsWith("#") ? raw : ("#" + raw)
-        }
         if (choice === "secondary") return Theme.secondary
         if (choice === "surface")   return Theme.surfaceVariantText
         return Theme.primary
